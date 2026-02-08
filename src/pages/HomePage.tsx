@@ -7,13 +7,13 @@ const parts = [
     to: '/practice/part5',
     label: 'Part 5',
     description: '短文穴埋め',
-    questions: '15問',
+    questions: '50問',
   },
   {
     to: '/practice/part6',
     label: 'Part 6',
     description: '長文穴埋め',
-    questions: '3パッセージ',
+    questions: '12パッセージ',
   },
 ]
 

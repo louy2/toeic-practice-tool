@@ -1,124 +1,61 @@
 import type { Question } from '../types'
 
 export const questions: Question[] = [
-  {
-    id: 'p5-001',
-    sentence: 'The manager _____ the report to the board of directors yesterday.',
-    choices: ['submitted', 'submitting', 'submit', 'submits'],
-    correctIndex: 0,
-    explanation:
-      '文中の "yesterday" から過去形が必要です。主語 "The manager" に対応する過去形は "submitted" です。',
-  },
-  {
-    id: 'p5-002',
-    sentence: 'All employees must _____ the safety training before starting work.',
-    choices: ['complete', 'completed', 'completing', 'completion'],
-    correctIndex: 0,
-    explanation:
-      '助動詞 "must" の後には動詞の原形が来ます。したがって "complete" が正解です。',
-  },
-  {
-    id: 'p5-003',
-    sentence: 'The new product was _____ received by customers at the trade show.',
-    choices: ['enthusiastically', 'enthusiastic', 'enthusiasm', 'enthusiast'],
-    correctIndex: 0,
-    explanation:
-      '動詞 "received" を修飾するには副詞が必要です。"enthusiastically"（熱狂的に）が正解です。',
-  },
-  {
-    id: 'p5-004',
-    sentence: 'Ms. Tanaka is responsible _____ managing the overseas operations.',
-    choices: ['for', 'to', 'with', 'of'],
-    correctIndex: 0,
-    explanation:
-      '"responsible for ~" で「～に責任がある」という意味になります。前置詞 "for" が正解です。',
-  },
-  {
-    id: 'p5-005',
-    sentence: 'The conference room is _____ enough to accommodate fifty people.',
-    choices: ['large', 'largely', 'larger', 'largest'],
-    correctIndex: 0,
-    explanation:
-      '"enough" の前には形容詞の原級が来ます。"large enough to ~" で「～するのに十分大きい」。',
-  },
-  {
-    id: 'p5-006',
-    sentence: 'Due to the heavy rain, the outdoor event has been _____ until next week.',
-    choices: ['postponed', 'postpone', 'postponing', 'postponement'],
-    correctIndex: 0,
-    explanation:
-      '"has been + 過去分詞" で現在完了の受動態です。"postponed"（延期された）が正解です。',
-  },
-  {
-    id: 'p5-007',
-    sentence: 'Customers who purchase items online will receive a _____ within 24 hours.',
-    choices: ['confirmation', 'confirm', 'confirmed', 'confirming'],
-    correctIndex: 0,
-    explanation:
-      '冠詞 "a" の後には名詞が必要です。"confirmation"（確認）が名詞で正解です。',
-  },
-  {
-    id: 'p5-008',
-    sentence: 'The marketing team _____ on a new advertising campaign since last month.',
-    choices: ['has been working', 'works', 'is working', 'worked'],
-    correctIndex: 0,
-    explanation:
-      '"since last month" は現在完了進行形と共に使います。"has been working" が正解です。',
-  },
-  {
-    id: 'p5-009',
-    sentence: 'Please make sure that all documents are _____ before the deadline.',
-    choices: ['submitted', 'submit', 'submitting', 'submits'],
-    correctIndex: 0,
-    explanation:
-      '"are + 過去分詞" で受動態になります。"submitted"（提出された）が正解です。',
-  },
-  {
-    id: 'p5-010',
-    sentence: 'The company offers a _____ range of products to meet customer needs.',
-    choices: ['wide', 'widely', 'widen', 'width'],
-    correctIndex: 0,
-    explanation:
-      '名詞 "range" を修飾するには形容詞が必要です。"wide"（幅広い）が正解です。',
-  },
-  {
-    id: 'p5-011',
-    sentence: '_____ the budget constraints, the project was completed on time.',
-    choices: ['Despite', 'Although', 'Because', 'Unless'],
-    correctIndex: 0,
-    explanation:
-      '"Despite" は前置詞で名詞句 "the budget constraints" の前に使えます。"Although" は接続詞で節が必要です。',
-  },
-  {
-    id: 'p5-012',
-    sentence: 'Mr. Kim suggested that the meeting _____ rescheduled to Friday.',
-    choices: ['be', 'is', 'was', 'will be'],
-    correctIndex: 0,
-    explanation:
-      '"suggest that + 主語 + 動詞の原形" は仮定法現在の形です。"be" が正解です。',
-  },
-  {
-    id: 'p5-013',
-    sentence: 'The annual report will be _____ to all shareholders by the end of March.',
-    choices: ['distributed', 'distribute', 'distributing', 'distribution'],
-    correctIndex: 0,
-    explanation:
-      '"will be + 過去分詞" で未来の受動態です。"distributed"（配布された）が正解です。',
-  },
-  {
-    id: 'p5-014',
-    sentence: 'Applicants must have at least five years of _____ in project management.',
-    choices: ['experience', 'experienced', 'experiencing', 'experiences'],
-    correctIndex: 0,
-    explanation:
-      '前置詞 "of" の後には名詞が必要です。"experience"（経験）は不可算名詞で正解です。',
-  },
-  {
-    id: 'p5-015',
-    sentence: 'The factory inspection revealed that safety procedures were not _____ followed.',
-    choices: ['properly', 'proper', 'property', 'propose'],
-    correctIndex: 0,
-    explanation:
-      '動詞 "followed" を修飾するには副詞が必要です。"properly"（適切に）が正解です。',
-  },
+  // === 動詞の時制・態 (1-15) ===
+  { id: 'p5-001', sentence: 'The manager _____ the report to the board of directors yesterday.', choices: ['submitted', 'submitting', 'submit', 'submits'], correctIndex: 0, explanation: '"yesterday" から過去形が必要。"submitted" が正解。' },
+  { id: 'p5-002', sentence: 'All employees must _____ the safety training before starting work.', choices: ['completing', 'completed', 'complete', 'completion'], correctIndex: 2, explanation: '助動詞 "must" の後には動詞の原形。"complete" が正解。' },
+  { id: 'p5-003', sentence: 'The quarterly earnings report _____ by the accounting department next Monday.', choices: ['will release', 'will be released', 'releasing', 'has released'], correctIndex: 1, explanation: '報告書は「発表される」ので未来の受動態 "will be released" が正解。' },
+  { id: 'p5-004', sentence: 'By the time the CEO arrived, the staff _____ the conference room.', choices: ['already prepared', 'are preparing', 'will prepare', 'had already prepared'], correctIndex: 3, explanation: '過去のある時点より前に完了した動作なので過去完了形 "had already prepared" が正解。' },
+  { id: 'p5-005', sentence: 'The renovation of the lobby _____ since early March.', choices: ['has been ongoing', 'is ongoing', 'was ongoing', 'will be ongoing'], correctIndex: 0, explanation: '"since early March" は現在完了と使う。"has been ongoing" が正解。' },
+  { id: 'p5-006', sentence: 'Sales figures _____ significantly if the new marketing strategy is implemented.', choices: ['improved', 'will improve', 'improving', 'improves'], correctIndex: 1, explanation: 'if節が現在形の条件文では主節は未来形。"will improve" が正解。' },
+  { id: 'p5-007', sentence: 'The hotel guests _____ about the noise from the construction site last evening.', choices: ['complain', 'have complained', 'complained', 'are complaining'], correctIndex: 2, explanation: '"last evening" は過去の時点。過去形 "complained" が正解。' },
+  { id: 'p5-008', sentence: 'Applications for the internship program _____ until the end of this month.', choices: ['accepting', 'will accept', 'have accepted', 'are being accepted'], correctIndex: 3, explanation: '応募は「受け付けられている」ので進行形の受動態 "are being accepted" が正解。' },
+  { id: 'p5-009', sentence: 'The branch office in Seoul _____ more than 200 employees since its opening.', choices: ['has hired', 'hiring', 'hires', 'hire'], correctIndex: 0, explanation: '"since its opening" は現在完了形と使う。"has hired" が正解。' },
+  { id: 'p5-010', sentence: 'The software update _____ automatically overnight if your device is connected to Wi-Fi.', choices: ['installs', 'will be installed', 'installed', 'installing'], correctIndex: 1, explanation: '条件文でアップデートは「インストールされる」受動態。"will be installed" が正解。' },
+  { id: 'p5-011', sentence: 'Ms. Rivera _____ the keynote speech at the technology summit next Friday.', choices: ['delivered', 'delivers', 'will deliver', 'delivering'], correctIndex: 2, explanation: '"next Friday" は未来の予定。"will deliver" が正解。' },
+  { id: 'p5-012', sentence: 'The building plans _____ by the city council before construction can begin.', choices: ['approving', 'must be approved', 'approve', 'has approved'], correctIndex: 1, explanation: '計画は「承認されなければならない」ので "must be approved" が正解。' },
+  { id: 'p5-013', sentence: 'Mr. Kim suggested that the meeting _____ rescheduled to Friday.', choices: ['will be', 'is', 'was', 'be'], correctIndex: 3, explanation: '"suggest that + 主語 + 動詞の原形" は仮定法現在。"be" が正解。' },
+  { id: 'p5-014', sentence: 'The research team _____ on the clinical trials for over two years now.', choices: ['worked', 'has been working', 'works', 'working'], correctIndex: 1, explanation: '"for over two years now" は現在完了進行形。"has been working" が正解。' },
+  { id: 'p5-015', sentence: 'Once the merger _____, all employees will receive updated contracts.', choices: ['is finalized', 'will finalize', 'finalizing', 'finalized'], correctIndex: 0, explanation: '時の副詞節では未来のことでも現在形を使う。"is finalized" が正解。' },
+
+  // === 品詞の識別 (16-35) ===
+  { id: 'p5-016', sentence: 'The CEO made a _____ announcement regarding the company restructuring.', choices: ['formally', 'formalize', 'formal', 'formality'], correctIndex: 2, explanation: '名詞 "announcement" を修飾するには形容詞。"formal" が正解。' },
+  { id: 'p5-017', sentence: 'The new software was designed to increase employee _____ across all departments.', choices: ['productive', 'productively', 'productivity', 'produce'], correctIndex: 2, explanation: '動詞 "increase" の目的語には名詞が必要。"productivity" が正解。' },
+  { id: 'p5-018', sentence: 'Our customer service representatives handle complaints _____ and courteously.', choices: ['efficient', 'efficiency', 'efficiently', 'efficiencies'], correctIndex: 2, explanation: '動詞 "handle" を修飾するには副詞。"efficiently" が正解。' },
+  { id: 'p5-019', sentence: 'The _____ of the new warehouse facility is expected to take approximately six months.', choices: ['construct', 'constructive', 'constructively', 'construction'], correctIndex: 3, explanation: '冠詞 "The" の後、主語の位置には名詞が必要。"construction" が正解。' },
+  { id: 'p5-020', sentence: 'Employees are _____ encouraged to participate in the wellness program.', choices: ['strong', 'strongly', 'strength', 'strengthen'], correctIndex: 1, explanation: '動詞 "encouraged" を修飾するには副詞。"strongly" が正解。' },
+  { id: 'p5-021', sentence: 'The marketing department presented a _____ analysis of consumer trends.', choices: ['comprehensively', 'comprehension', 'comprehensive', 'comprehend'], correctIndex: 2, explanation: '名詞 "analysis" を修飾するには形容詞。"comprehensive" が正解。' },
+  { id: 'p5-022', sentence: 'Customer _____ has improved significantly since the new training program was introduced.', choices: ['satisfy', 'satisfactory', 'satisfactorily', 'satisfaction'], correctIndex: 3, explanation: '主語の位置には名詞が必要。"satisfaction" が正解。' },
+  { id: 'p5-023', sentence: 'The financial advisor recommended a more _____ investment strategy.', choices: ['conservation', 'conservatively', 'conserve', 'conservative'], correctIndex: 3, explanation: '名詞 "strategy" を修飾するには形容詞。"conservative" が正解。' },
+  { id: 'p5-024', sentence: 'The project was completed _____ despite the tight deadline.', choices: ['success', 'successful', 'successfully', 'succeed'], correctIndex: 2, explanation: '動詞 "completed" を修飾するには副詞。"successfully" が正解。' },
+  { id: 'p5-025', sentence: 'The _____ response to the product launch exceeded expectations.', choices: ['enthusiasm', 'enthusiastic', 'enthusiastically', 'enthuse'], correctIndex: 1, explanation: '名詞 "response" を修飾するには形容詞。"enthusiastic" が正解。' },
+  { id: 'p5-026', sentence: 'All tenants must notify the building management of any _____ changes to their offices.', choices: ['structurally', 'structure', 'structural', 'restructure'], correctIndex: 2, explanation: '名詞 "changes" を修飾するには形容詞。"structural" が正解。' },
+  { id: 'p5-027', sentence: 'Dr. Patel is widely _____ as one of the leading researchers in biotechnology.', choices: ['recognition', 'recognize', 'recognized', 'recognizable'], correctIndex: 2, explanation: '"is recognized" で受動態。過去分詞 "recognized" が正解。' },
+  { id: 'p5-028', sentence: 'The company prides itself on its _____ to environmental sustainability.', choices: ['commit', 'committed', 'committedly', 'commitment'], correctIndex: 3, explanation: '所有格 "its" の後には名詞が必要。"commitment" が正解。' },
+  { id: 'p5-029', sentence: 'The new regulation requires _____ reporting of all financial transactions.', choices: ['accuracy', 'accurate', 'accurately', 'accuracies'], correctIndex: 1, explanation: '名詞 "reporting" を修飾するには形容詞。"accurate" が正解。' },
+  { id: 'p5-030', sentence: 'The factory has been operating _____ since the installation of the new equipment.', choices: ['reliably', 'reliable', 'reliability', 'rely'], correctIndex: 0, explanation: '動詞 "operating" を修飾するには副詞。"reliably" が正解。' },
+  { id: 'p5-031', sentence: 'Effective _____ between departments is essential for project success.', choices: ['communicate', 'communicative', 'communicatively', 'communication'], correctIndex: 3, explanation: '形容詞 "Effective" の後、主語の位置には名詞。"communication" が正解。' },
+  { id: 'p5-032', sentence: 'The architect presented an _____ detailed blueprint of the new office building.', choices: ['exception', 'exceptional', 'exceptionally', 'except'], correctIndex: 2, explanation: '形容詞 "detailed" を修飾するには副詞。"exceptionally" が正解。' },
+  { id: 'p5-033', sentence: 'Job applicants should demonstrate their _____ to work as part of a team.', choices: ['able', 'ably', 'ability', 'enable'], correctIndex: 2, explanation: '所有格 "their" の後には名詞。"ability" が正解。' },
+  { id: 'p5-034', sentence: 'The new policy was implemented to ensure the _____ of employee data.', choices: ['protect', 'protective', 'protectively', 'protection'], correctIndex: 3, explanation: '冠詞 "the" の後には名詞。"protection" が正解。' },
+  { id: 'p5-035', sentence: 'The shipment arrived _____ than expected due to favorable weather conditions.', choices: ['early', 'earlier', 'earliest', 'earliness'], correctIndex: 1, explanation: '"than" があるので比較級。"earlier" が正解。' },
+
+  // === 前置詞 (36-45) ===
+  { id: 'p5-036', sentence: 'Ms. Tanaka is responsible _____ managing the overseas operations.', choices: ['to', 'with', 'for', 'of'], correctIndex: 2, explanation: '"responsible for ~" で「～に責任がある」。前置詞 "for" が正解。' },
+  { id: 'p5-037', sentence: 'The new parking policy will go into effect _____ January 1.', choices: ['at', 'on', 'in', 'by'], correctIndex: 1, explanation: '特定の日付の前には "on" を使う。"on January 1" が正解。' },
+  { id: 'p5-038', sentence: 'The seminar on digital marketing is aimed _____ small business owners.', choices: ['for', 'to', 'at', 'with'], correctIndex: 2, explanation: '"aimed at ~" で「～を対象としている」。前置詞 "at" が正解。' },
+  { id: 'p5-039', sentence: 'In _____ of the recent changes, all staff should review the updated handbook.', choices: ['view', 'light', 'spite', 'terms'], correctIndex: 1, explanation: '"in light of ~" で「～を踏まえて」。"light" が正解。' },
+  { id: 'p5-040', sentence: 'The warranty is valid _____ a period of two years from the date of purchase.', choices: ['during', 'for', 'within', 'along'], correctIndex: 1, explanation: '期間を表す "for a period of ~" が正解。' },
+  { id: 'p5-041', sentence: 'Please refrain _____ using mobile phones during the presentation.', choices: ['to', 'for', 'of', 'from'], correctIndex: 3, explanation: '"refrain from ~ing" で「～を控える」。前置詞 "from" が正解。' },
+  { id: 'p5-042', sentence: 'The contract is subject _____ approval by the board of directors.', choices: ['for', 'to', 'with', 'on'], correctIndex: 1, explanation: '"subject to ~" で「～を条件として」。前置詞 "to" が正解。' },
+  { id: 'p5-043', sentence: 'The headquarters is located _____ the corner of Main Street and Park Avenue.', choices: ['in', 'on', 'at', 'by'], correctIndex: 2, explanation: '交差点を表す "at the corner of" が正解。' },
+  { id: 'p5-044', sentence: 'Attendance at the safety workshop is mandatory _____ all new employees.', choices: ['to', 'for', 'with', 'by'], correctIndex: 1, explanation: '"mandatory for ~" で「～にとって必須」。前置詞 "for" が正解。' },
+  { id: 'p5-045', sentence: 'The merger will result _____ the creation of over 500 new positions.', choices: ['to', 'for', 'with', 'in'], correctIndex: 3, explanation: '"result in ~" で「～という結果になる」。前置詞 "in" が正解。' },
+
+  // === 接続詞・接続副詞 (46-55) ===
+  { id: 'p5-046', sentence: '_____ the budget constraints, the project was completed on time.', choices: ['Despite', 'Although', 'Because', 'Unless'], correctIndex: 0, explanation: '"Despite" は前置詞で名詞句の前に使える。"Although" は接続詞で節が必要。' },
+  { id: 'p5-047', sentence: 'The outdoor event will proceed as planned _____ it rains heavily.', choices: ['although', 'despite', 'unless', 'because'], correctIndex: 2, explanation: '「大雨が降らない限り」なので "unless" が正解。' },
+  { id: 'p5-048', sentence: 'Mr. Nakamura speaks three languages fluently; _____, he was selected for the international post.', choices: ['however', 'therefore', 'otherwise', 'moreover'], correctIndex: 1, explanation: '結果を表す接続副詞。「したがって」の "therefore" が正解。' },
+  { id: 'p5-049', sentence: '_____ the economy has slowed down, our company continues to grow steadily.', choices: ['Despite', 'Even though', 'Because', 'In order that'], correctIndex: 1, explanation: '節（主語+動詞）が続くので接続詞 "Even though" が正解。"Despite" は前置詞。' },
+  { id: 'p5-050', sentence: 'The restaurant is popular not only for its food _____ for its exceptional service.', choices: ['and', 'or', 'but also', 'as well'], correctIndex: 2, explanation: '"not only A but also B" の構文。"but also" が正解。' },
 ]
