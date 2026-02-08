@@ -20,6 +20,7 @@ export function ResultPage() {
   const trend = getGrowthTrend()
   const sessions = getSessionHistory()
   const retryPath = state.part === 'part6' ? '/practice/part6' : '/practice/part5'
+  const pct = state.total > 0 ? Math.round((state.correct / state.total) * 100) : 0
 
   return (
     <div className="flex min-h-full flex-col bg-slate-50">
@@ -28,29 +29,43 @@ export function ResultPage() {
       <main className="flex flex-1 flex-col items-center justify-center gap-8 p-6">
         <ResultSummary correct={state.correct} total={state.total} />
 
-        {/* 成長フィードバック */}
-        {sessions.length >= 2 && (
-          <div className="w-full max-w-xs rounded-2xl bg-white p-4 text-center shadow-sm">
-            {trend.direction === 'up' && (
-              <p className="text-sm font-bold text-green-600">
-                成長中！ 正答率が+{trend.diff}%上がっています
-              </p>
-            )}
-            {trend.direction === 'down' && (
-              <p className="text-sm font-bold text-orange-600">
-                続けることが大切！ 練習を重ねましょう
-              </p>
-            )}
-            {trend.direction === 'stable' && (
-              <p className="text-sm font-bold text-blue-600">
-                安定した実力です！
-              </p>
-            )}
+        {/* 励ましメッセージ */}
+        <div className="w-full max-w-xs rounded-2xl bg-white p-4 text-center shadow-sm">
+          {sessions.length >= 2 ? (
+            <>
+              {trend.direction === 'up' && (
+                <p className="text-sm font-bold text-green-600">
+                  成長中！ 正答率が+{trend.diff}%上がっています
+                </p>
+              )}
+              {trend.direction === 'down' && (
+                <p className="text-sm font-bold text-orange-600">
+                  続けることが大切！ 練習を重ねましょう
+                </p>
+              )}
+              {trend.direction === 'stable' && (
+                <p className="text-sm font-bold text-blue-600">
+                  安定した実力です！
+                </p>
+              )}
+            </>
+          ) : (
+            <p className="text-sm font-bold text-blue-600">
+              {pct >= 90
+                ? 'すばらしい！ この調子で続けましょう！'
+                : pct >= 70
+                  ? 'いい感じです！ 練習を重ねてさらに伸ばしましょう！'
+                  : pct >= 50
+                    ? 'よく頑張りました！ 繰り返し練習で力がつきます！'
+                    : '挑戦することが大事！ 続ければ必ず伸びます！'}
+            </p>
+          )}
+          {sessions.length >= 2 && (
             <Link to="/stats" className="mt-2 inline-block text-xs text-blue-500 font-medium">
               学習の記録を見る &rarr;
             </Link>
-          </div>
-        )}
+          )}
+        </div>
 
         <div className="flex w-full max-w-xs flex-col gap-3">
           <Link
