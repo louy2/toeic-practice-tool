@@ -54,35 +54,35 @@ Conference Registration Team`,
   },
   {
     id: 'p6-002',
-    instruction: 'Questions 5-8 refer to the following notice.',
+    instruction: 'Questions 1-4 refer to the following notice.',
     passage: `NOTICE TO ALL EMPLOYEES
 
-Effective April 1, the company will implement a new flexible work schedule policy. Under this policy, employees may choose to start their workday ____(5)____ 7:00 A.M. and 10:00 A.M.
+Effective April 1, the company will implement a new flexible work schedule policy. Under this policy, employees may choose to start their workday ____(1)____ 7:00 A.M. and 10:00 A.M.
 
-All employees are still ____(6)____ to work a minimum of eight hours per day. Core hours, during which all staff must be present in the office, are from 10:00 A.M. to 3:00 P.M.
+All employees are still ____(2)____ to work a minimum of eight hours per day. Core hours, during which all staff must be present in the office, are from 10:00 A.M. to 3:00 P.M.
 
-____(7)____. Managers will review requests and respond within three business days.
+____(3)____. Managers will review requests and respond within three business days.
 
-This policy is being introduced on a trial basis and will be ____(8)____ after six months to determine its effectiveness.
+This policy is being introduced on a trial basis and will be ____(4)____ after six months to determine its effectiveness.
 
 Human Resources Department`,
     blanks: [
       {
-        blankId: 'p6-002-5',
+        blankId: 'p6-002-1',
         choices: ['between', 'during', 'among', 'within'],
         correctIndex: 0,
         explanation:
           '"between A and B" で「AとBの間」。2つの時刻の間を示すには "between" を使います。',
       },
       {
-        blankId: 'p6-002-6',
+        blankId: 'p6-002-2',
         choices: ['required', 'requiring', 'require', 'requirement'],
         correctIndex: 0,
         explanation:
           '"are required to ~" で「～することが求められている」。受動態の過去分詞 "required" が正解。',
       },
       {
-        blankId: 'p6-002-7',
+        blankId: 'p6-002-3',
         choices: [
           'Employees wishing to adopt a flexible schedule must submit a request to their supervisor.',
           'The company cafeteria will also be renovated during this period.',
@@ -94,7 +94,7 @@ Human Resources Department`,
           'フレキシブル勤務制度の文脈で、申請手続きの説明が最も適切です。',
       },
       {
-        blankId: 'p6-002-8',
+        blankId: 'p6-002-4',
         choices: ['evaluated', 'evaluate', 'evaluating', 'evaluation'],
         correctIndex: 0,
         explanation:
@@ -104,33 +104,33 @@ Human Resources Department`,
   },
   {
     id: 'p6-003',
-    instruction: 'Questions 9-12 refer to the following advertisement.',
+    instruction: 'Questions 1-4 refer to the following advertisement.',
     passage: `GREENFIELD ORGANIC MARKET — NOW OPEN!
 
-We are excited to announce the opening of our newest location at 250 Oak Street. Greenfield Organic Market is ____(9)____ to providing the freshest organic produce, dairy, and baked goods to our community.
+We are excited to announce the opening of our newest location at 250 Oak Street. Greenfield Organic Market is ____(1)____ to providing the freshest organic produce, dairy, and baked goods to our community.
 
-Our store features products sourced ____(10)____ from local farms within a 50-mile radius. By supporting local farmers, we ensure that our customers receive the highest quality ingredients while reducing our environmental impact.
+Our store features products sourced ____(2)____ from local farms within a 50-mile radius. By supporting local farmers, we ensure that our customers receive the highest quality ingredients while reducing our environmental impact.
 
-____(11)____. Simply sign up at the customer service desk to start earning points on every purchase.
+____(3)____. Simply sign up at the customer service desk to start earning points on every purchase.
 
-Visit us today and experience the Greenfield ____(12)____! We are open seven days a week, from 8:00 A.M. to 9:00 P.M.`,
+Visit us today and experience the Greenfield ____(4)____! We are open seven days a week, from 8:00 A.M. to 9:00 P.M.`,
     blanks: [
       {
-        blankId: 'p6-003-9',
+        blankId: 'p6-003-1',
         choices: ['committed', 'committing', 'commit', 'committee'],
         correctIndex: 0,
         explanation:
           '"is committed to ~" で「～に尽力している」。"committed" が正解。',
       },
       {
-        blankId: 'p6-003-10',
+        blankId: 'p6-003-2',
         choices: ['directly', 'direct', 'direction', 'directed'],
         correctIndex: 0,
         explanation:
           '動詞 "sourced" を修飾するには副詞が必要。"directly"（直接）が正解。',
       },
       {
-        blankId: 'p6-003-11',
+        blankId: 'p6-003-3',
         choices: [
           'As a special grand opening offer, join our loyalty program and receive a 20% discount on your first order.',
           'Our store will be closed for renovations starting next month.',
@@ -142,7 +142,7 @@ Visit us today and experience the Greenfield ____(12)____! We are open seven day
           '後文のポイントプログラム登録の話に自然につながるのは、ロイヤリティプログラムの紹介です。',
       },
       {
-        blankId: 'p6-003-12',
+        blankId: 'p6-003-4',
         choices: ['difference', 'different', 'differ', 'differently'],
         correctIndex: 0,
         explanation:
