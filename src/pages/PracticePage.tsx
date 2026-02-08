@@ -23,7 +23,7 @@ export function PracticePage() {
     if (finished) {
       appendAnswers(result.answers)
       navigate('/result', {
-        state: { correct: result.correctCount, total: result.totalQuestions },
+        state: { correct: result.correctCount, total: result.totalQuestions, part: 'part5' },
         replace: true,
       })
     }

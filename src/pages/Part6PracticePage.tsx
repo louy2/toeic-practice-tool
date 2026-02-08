@@ -27,7 +27,7 @@ export function Part6PracticePage() {
     if (finished) {
       appendAnswers(result.answers)
       navigate('/result', {
-        state: { correct: result.correctCount, total: result.totalQuestions },
+        state: { correct: result.correctCount, total: result.totalQuestions, part: 'part6' },
         replace: true,
       })
     }
