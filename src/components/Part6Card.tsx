@@ -23,6 +23,11 @@ export function Part6Card({
   const answered = selectedIndex !== null
   const isCorrect = selectedIndex === currentBlank.correctIndex
 
+  // パッセージ内のマーカーからグローバル番号一覧を取得
+  const globalNumbers = (passage.passage.match(/____\((\d+)\)____/g) || []).map(
+    (m) => m.match(/\d+/)![0],
+  )
+
   function choiceState(index: number): 'default' | 'correct' | 'wrong' | 'dimmed' {
     if (!answered) return 'default'
     if (index === currentBlank.correctIndex) return 'correct'
@@ -31,20 +36,26 @@ export function Part6Card({
   }
 
   // パッセージ内のマーカーをハイライト表示に変換
+  // マーカーの表示番号（グローバル番号）はそのまま保持し、
+  // blanks[] 配列へのインデックスは出現順で参照する
   function renderPassage() {
     const parts = passage.passage.split(/(____\(\d+\)____)/)
+    let localIndex = 0
     return parts.map((part, i) => {
       const match = part.match(/____\((\d+)\)____/)
       if (!match) return <span key={i}>{part}</span>
 
-      const blankNum = parseInt(match[1], 10) - 1
-      const isActive = blankNum === currentBlankIndex
-      const key = `${passageIndex}-${blankNum}`
+      const displayNum = match[1] // 表示用のグローバル番号
+      const blankLocalIndex = localIndex // blanks[] へのローカルインデックス
+      localIndex++
+
+      const isActive = blankLocalIndex === currentBlankIndex
+      const key = `${passageIndex}-${blankLocalIndex}`
       const answeredChoice = blankAnswers[key]
 
       // 既に回答済みの空欄は正解を表示
       if (answeredChoice !== undefined && !isActive) {
-        const blank = passage.blanks[blankNum]
+        const blank = passage.blanks[blankLocalIndex]
         return (
           <span key={i} className="font-semibold text-green-700 underline decoration-green-400">
             {blank.choices[blank.correctIndex]}
@@ -59,7 +70,7 @@ export function Part6Card({
             key={i}
             className="inline-block min-w-[80px] rounded bg-blue-100 px-2 py-0.5 text-center font-bold text-blue-600"
           >
-            ({blankNum + 1})
+            ({displayNum})
           </span>
         )
       }
@@ -67,7 +78,7 @@ export function Part6Card({
       // まだ回答していない空欄
       return (
         <span key={i} className="inline-block min-w-[60px] border-b-2 border-gray-300 text-center text-gray-400">
-          ({blankNum + 1})
+          ({displayNum})
         </span>
       )
     })
@@ -83,9 +94,9 @@ export function Part6Card({
         {renderPassage()}
       </div>
 
-      {/* 空欄の問い */}
+      {/* 空欄の問い — パッセージ内のグローバル番号を表示 */}
       <p className="text-sm font-bold text-blue-600">
-        空欄 ({currentBlankIndex + 1}) に入る最も適切なものを選んでください。
+        空欄 ({globalNumbers[currentBlankIndex]}) に入る最も適切なものを選んでください。
       </p>
 
       {/* 選択肢 */}
